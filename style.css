@@ -37,7 +37,15 @@
     font-size: 0.6em;
     font-weight: 600;
     background: none !important;
-    color: rgba(255,255,255,0.3);
+    color: rgba(0,0,0,0.25);
+}
+/* White slide-number for dark/teal slides */
+section[data-background-gradient] ~ .slide-number,
+.reveal .slide-number-a { color: rgba(0,0,0,0.25); }
+
+/* Fix: vertically center content-light slides */
+.slide-vcenter {
+    justify-content: center !important;
 }
 .reveal .slide-background-content {
     filter: none;
@@ -59,6 +67,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* ========== TYPOGRAPHY ========== */
@@ -372,6 +381,10 @@
     font-size: 5.5em;
     font-weight: 900;
 }
+.big-number--display {
+    font-family: var(--font-display) !important;
+    letter-spacing: -0.03em;
+}
 .big-number-sub {
     text-align: center;
     font-size: 1em;
@@ -409,46 +422,54 @@
     margin-top: 0.3em;
 }
 
-/* ========== CYCLE (slide 5) ========== */
-.cycle-ring {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2em;
-    margin-top: 2em;
+/* ========== CYCLE CIRCLE (slide 5) ========== */
+.cycle-circle {
     position: relative;
+    width: 380px;
+    height: 380px;
+    margin: 1em auto 0;
 }
-.cycle-ring::after {
-    content: '';
+.cycle-circle__ring {
     position: absolute;
-    width: 70%;
-    height: 70%;
-    border: 2px dashed rgba(0,0,0,0.08);
+    inset: 30px;
+    border: 2px dashed rgba(0,0,0,0.1);
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 0;
 }
-.cycle-node {
-    position: relative;
-    z-index: 1;
-    width: 140px;
-    height: 140px;
+.cycle-circle__node {
+    position: absolute;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 0.8em;
+    font-size: 0.72em;
     border: 3px solid;
     background: #fff;
     text-align: center;
+    line-height: 1.2;
+    z-index: 1;
+    padding: 0.3em;
 }
+.cycle-circle__node--1 { top: 0; left: 50%; transform: translateX(-50%); }
+.cycle-circle__node--2 { top: 50%; right: 0; transform: translateY(-50%); }
+.cycle-circle__node--3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+.cycle-circle__node--4 { top: 50%; left: 0; transform: translateY(-50%); }
 .cycle-node--mint { border-color: var(--mint); color: var(--mint); }
 .cycle-node--coral { border-color: var(--coral); color: var(--coral); }
 .cycle-node--orange { border-color: #F59E0B; color: #D97706; }
 .cycle-node--gray { border-color: #94a3b8; color: #64748b; }
+.cycle-circle__arrow {
+    position: absolute;
+    color: #cbd5e1;
+    font-size: 1.2em;
+    z-index: 2;
+}
+.cycle-circle__arrow--1 { top: 18%; right: 12%; transform: rotate(45deg); }
+.cycle-circle__arrow--2 { bottom: 18%; right: 12%; transform: rotate(135deg); }
+.cycle-circle__arrow--3 { bottom: 18%; left: 12%; transform: rotate(225deg); }
+.cycle-circle__arrow--4 { top: 18%; left: 12%; transform: rotate(315deg); }
 
 /* ========== SPLIT LAYOUT (slide 7) ========== */
 .split-right {
@@ -545,6 +566,38 @@
 }
 .wd--on { background: rgba(78,205,196,0.15); color: var(--mint); }
 .wd--soft { background: rgba(255,107,107,0.1); color: var(--coral); }
+
+/* ========== CARE GRID (slide 16) ========== */
+.care-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+    margin-top: 1.2em;
+    max-width: 60%;
+}
+.care-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.care-card__icon {
+    font-size: 1.4em;
+    margin-bottom: 0.3em;
+    color: var(--mint);
+}
+.care-card strong {
+    display: block;
+    font-size: 0.8em;
+    color: var(--dark);
+    margin-bottom: 0.2em;
+}
+.care-card p {
+    font-size: 0.65em;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.4;
+}
 
 /* ========== TOOLS GRID (slide 14) ========== */
 .tools-grid {
@@ -875,7 +928,7 @@
     .hero-title { font-size: 3.5em; }
     .heading-white { font-size: 1.8em; }
     .heading-dark { font-size: 1.6em; }
-    .grid-2-col { grid-template-columns: 1fr; gap: 1em; }
+    .team-duo { grid-template-columns: 1fr; gap: 1em; }
     .cards-row { grid-template-columns: repeat(2, 1fr); }
     .tools-grid { grid-template-columns: repeat(2, 1fr); }
     .price-grid { grid-template-columns: 1fr; max-width: 280px; margin: 1em auto 0; }
@@ -887,5 +940,8 @@
     .fmt-arrow { transform: rotate(90deg); }
     .split-right { width: 100%; background: rgba(255,255,255,0.95); }
     .week-bar { flex-wrap: wrap; }
-    .cycle-node { width: 100px; height: 100px; font-size: 0.7em; }
+    .cycle-circle { width: 280px; height: 280px; }
+    .cycle-circle__node { width: 90px; height: 90px; font-size: 0.6em; }
+    .care-grid { max-width: 100%; }
+    .stats-hero { flex-direction: column; }
 }

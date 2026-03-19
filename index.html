@@ -73,7 +73,7 @@
     </section>
 
     <!-- 3 — PROBLEM: LONELINESS -->
-    <section data-background-gradient="radial-gradient(ellipse at 70% 60%, #2a1525 0%, #1a1b2e 50%, #0f1023 100%)">
+    <section class="slide-vcenter" data-background-gradient="radial-gradient(ellipse at 70% 60%, #2a1525 0%, #1a1b2e 50%, #0f1023 100%)">
         <p class="label dim-text">ПРОБЛЕМА</p>
         <h2 class="heading-white" style="font-size:2.4em;line-height:1.15;">Поиск работы —<br><span class="coral">самый одинокий</span><br>процесс</h2>
         <blockquote class="dark-quote">"Я рассылаю резюме и жду. Одна. Каждый день."<br><span class="dark-quote-cite">— Мария, 32, Product Manager</span></blockquote>
@@ -110,14 +110,19 @@
     </section>
 
     <!-- 5 — VICIOUS CYCLE -->
-    <section data-background-color="#f7f8fc">
+    <section class="slide-vcenter" data-background-color="#f7f8fc">
         <p class="label mint-text">ПРОБЛЕМА</p>
         <h2 class="heading-dark">Замкнутый круг</h2>
-        <div class="cycle-ring">
-            <div class="cycle-node cycle-node--mint">Откликнулся</div>
-            <div class="cycle-node cycle-node--coral">Тишина / Отказ</div>
-            <div class="cycle-node cycle-node--orange">Демотивация</div>
-            <div class="cycle-node cycle-node--gray">Прокрастинация</div>
+        <div class="cycle-circle">
+            <div class="cycle-circle__ring"></div>
+            <div class="cycle-circle__node cycle-circle__node--1 cycle-node--mint">Откликнулся</div>
+            <div class="cycle-circle__node cycle-circle__node--2 cycle-node--coral">Тишина /<br>Отказ</div>
+            <div class="cycle-circle__node cycle-circle__node--3 cycle-node--orange">Демотивация</div>
+            <div class="cycle-circle__node cycle-circle__node--4 cycle-node--gray">Прокрасти&shy;нация</div>
+            <div class="cycle-circle__arrow cycle-circle__arrow--1">&rarr;</div>
+            <div class="cycle-circle__arrow cycle-circle__arrow--2">&rarr;</div>
+            <div class="cycle-circle__arrow cycle-circle__arrow--3">&rarr;</div>
+            <div class="cycle-circle__arrow cycle-circle__arrow--4">&rarr;</div>
         </div>
     </section>
 
@@ -170,7 +175,7 @@
     <section data-background-color="#f7f8fc">
         <p class="label mint-text">ДИСЦИПЛИНА</p>
         <h2 class="heading-dark">Система без давления</h2>
-        <div class="big-number" style="margin:0.5em 0;"><span style="color:#4BA3C7;">3/7</span></div>
+        <div class="big-number" style="margin:0.5em 0;"><span class="big-number--display" style="color:#4BA3C7;">3/7</span></div>
         <p class="big-number-sub"><strong>3 активных дня из 7 = стабильная неделя</strong></p>
         <p class="note">Дни СБОРКИ: Понедельник, Вторник, Пятница. Чекин во Вторник и Пятницу.</p>
         <div class="week-bar">
@@ -250,14 +255,14 @@
     </section>
 
     <!-- 16 — MENTAL HEALTH -->
-    <section data-background-color="#f7f8fc">
+    <section data-background-color="#f7f8fc" data-background-image="https://sborka.work/images/buddy_v3.webp" data-background-size="35%" data-background-position="95% 65%" data-background-opacity="0.5">
         <p class="label mint-text">ЗАБОТА</p>
         <h2 class="heading-dark">Мы думаем о вашем<br><span class="mint">ментальном здоровье</span></h2>
-        <div class="icon-list" style="max-width:65%;">
-            <div><span class="list-dot mint-bg"></span>Активно консультируемся с психологами</div>
-            <div><span class="list-dot mint-bg"></span>Разрабатываем систему поддержки для участников</div>
-            <div><span class="list-dot mint-bg"></span>Чекин эмоционального состояния перед метриками</div>
-            <div><span class="list-dot mint-bg"></span>Поиск работы — стресс. Мы это понимаем и учитываем.</div>
+        <div class="care-grid">
+            <div class="care-card"><div class="care-card__icon">&#9829;</div><strong>Психологи в команде</strong><p>Активно консультируемся при разработке программы</p></div>
+            <div class="care-card"><div class="care-card__icon">&#9786;</div><strong>Эмоции важнее метрик</strong><p>Чекин состояния ПЕРЕД отчётами о прогрессе</p></div>
+            <div class="care-card"><div class="care-card__icon">&#9742;</div><strong>Поддержка 24/7</strong><p>Система поддержки для участников в чате</p></div>
+            <div class="care-card"><div class="care-card__icon">&#10084;</div><strong>Мы понимаем</strong><p>Поиск работы — стресс. Мы это учитываем.</p></div>
         </div>
     </section>
 
@@ -323,8 +328,8 @@
         <h2 class="heading-dark">Уровни и прогресс</h2>
         <p class="note">Часть Telegram Mini App. XP за каждое действие</p>
         <div class="lvl-stack">
-            <div class="lvl" style="width:15%"><span>Разминка</span><span>0 XP</span></div>
-            <div class="lvl lvl--2" style="width:30%"><span>Темп</span><span>150 XP</span></div>
+            <div class="lvl" style="width:22%"><span>Разминка</span><span>0 XP</span></div>
+            <div class="lvl lvl--2" style="width:35%"><span>Темп</span><span>150 XP</span></div>
             <div class="lvl lvl--3" style="width:50%"><span>Ускорение</span><span>400 XP</span></div>
             <div class="lvl lvl--4" style="width:65%"><span>Прорыв</span><span>800 XP</span></div>
             <div class="lvl lvl--5" style="width:82%"><span>Финишная</span><span>1500 XP</span></div>
