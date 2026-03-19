@@ -15,12 +15,13 @@
 /* ---- Base ---- */
 .reveal {
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     color: #64748b;
+    line-height: 1.5;
 }
 .reveal .slides section {
     text-align: center;
-    padding: 40px 60px;
+    padding: 48px 64px;
 }
 .reveal h1, .reveal h2, .reveal h3 {
     font-family: 'Inter', sans-serif;
@@ -28,6 +29,7 @@
     text-transform: none;
     text-shadow: none;
     letter-spacing: -0.02em;
+    line-height: 1.15;
 }
 .reveal .controls { color: var(--mint); }
 .reveal .progress span { background: var(--mint); }
@@ -53,7 +55,7 @@
    SLIDE 1 — HERO
    ================================================================ */
 .hero-title {
-    font-size: 5.5em;
+    font-size: 6em;
     font-weight: 900;
     color: #fff;
     line-height: 0.95;
@@ -64,12 +66,12 @@
     display: inline-block;
 }
 .hero-sub {
-    font-size: 1.3em;
+    font-size: 1.35em;
     color: rgba(255,255,255,0.45);
     margin: 0.5em 0 0;
 }
 .hero-tag {
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: 800;
     color: #fff;
     margin: 0.15em 0 0;
@@ -124,7 +126,7 @@
     border: 3px solid #fff;
 }
 .team-card__name {
-    font-size: 0.95em;
+    font-size: 1em;
     font-weight: 700;
     color: #1e293b;
     margin: 0;
@@ -134,36 +136,13 @@
     font-size: 0.55em;
     font-weight: 600;
     color: var(--mint);
-    margin: 0.2em 0 0.5em;
-}
-.team-card__stats {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 6px;
-}
-.team-card__stats > div { font-size: 0.55em; color: #94a3b8; }
-.team-card__num {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 1.4em;
-    color: #1e293b;
-    display: block;
-    line-height: 1;
+    margin: 0.15em 0 0.4em;
 }
 .team-card__bio {
-    font-size: 0.58em;
+    font-size: 0.6em;
     color: #64748b;
-    line-height: 1.5;
-    margin: 0 0 6px;
-}
-.team-card__tags { display: flex; gap: 4px; flex-wrap: wrap; }
-.team-card__tags span {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 20px;
-    background: rgba(78,205,196,0.1);
-    color: #0d9488;
+    line-height: 1.6;
+    margin: 0;
 }
 .mission-strip {
     display: flex;
@@ -194,34 +173,33 @@
    HEADINGS — Light & Dark
    ================================================================ */
 .heading-dark {
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 900;
     color: #1e293b;
-    margin: 0 0 0.15em;
+    margin: 0 0 0.2em;
     border-bottom: 4px solid var(--mint);
-    padding-bottom: 0.08em;
+    padding-bottom: 0.06em;
     display: inline-block;
 }
 .heading-white {
-    font-size: 2.2em;
+    font-size: 2.4em;
     font-weight: 900;
     color: #fff;
     margin: 0 0 0.3em;
-    line-height: 1.15;
 }
 
 .label {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
 }
 .note {
-    font-size: 0.7em;
+    font-size: 0.75em;
     color: #94a3b8;
     font-style: italic;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 .sub-white {
     color: rgba(255,255,255,0.5);
@@ -406,11 +384,11 @@
 .icon-list > div {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
-    padding: 6px 0;
-    font-size: 0.82em;
+    gap: 10px;
+    padding: 7px 0;
+    font-size: 0.85em;
     color: #475569;
-    line-height: 1.5;
+    line-height: 1.55;
 }
 .icon-list > div strong { color: #1e293b; }
 .list-dot {
@@ -444,8 +422,8 @@
 .p-card--coral { border-top-color: var(--coral); }
 .p-card--yellow { border-top-color: var(--yellow); }
 .p-card-icon { font-size: 1.5em; margin-bottom: 6px; opacity: 0.4; }
-.p-card h3 { font-size: 0.8em; font-weight: 800; color: #1e293b; margin: 0 0 4px; }
-.p-card p { font-size: 0.62em; color: #94a3b8; margin: 0; line-height: 1.4; }
+.p-card h3 { font-size: 0.85em; font-weight: 800; color: #1e293b; margin: 0 0 5px; }
+.p-card p { font-size: 0.65em; color: #94a3b8; margin: 0; line-height: 1.45; }
 
 /* ================================================================
    WEEK BAR (slide 10) + BIG NUMBER
@@ -507,9 +485,9 @@
     border-radius: 8px;
     padding: 10px 12px;
 }
-.t-card strong { font-size: 14px; color: #fff; display: block; }
-.t-card em { font-size: 12px; color: var(--mint); font-style: normal; display: block; }
-.t-card span { font-size: 12px; color: rgba(255,255,255,0.3); display: block; }
+.t-card strong { font-size: 15px; color: #fff; display: block; }
+.t-card em { font-size: 13px; color: var(--mint); font-style: normal; display: block; margin-top: 1px; }
+.t-card span { font-size: 13px; color: rgba(255,255,255,0.3); display: block; }
 
 /* ================================================================
    CARE GRID (slide 16)
@@ -529,8 +507,8 @@
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 .care-card__icon { font-size: 1.2em; color: var(--mint); margin-bottom: 4px; }
-.care-card strong { display: block; font-size: 0.75em; color: #1e293b; margin-bottom: 2px; }
-.care-card p { font-size: 0.6em; color: #94a3b8; margin: 0; line-height: 1.4; }
+.care-card strong { display: block; font-size: 0.78em; color: #1e293b; margin-bottom: 3px; }
+.care-card p { font-size: 0.63em; color: #94a3b8; margin: 0; line-height: 1.45; }
 
 /* ================================================================
    RHYTHM (slide 17)
@@ -592,7 +570,7 @@
 .sched-d--blue { background: var(--blue); }
 .sched-d--green { background: var(--green); }
 .sched-d--coral { background: var(--coral); }
-.sched-info { flex: 1; font-size: 0.8em; color: #1e293b; }
+.sched-info { flex: 1; font-size: 0.85em; color: #1e293b; }
 
 /* ================================================================
    FORMAT CARDS (slide 19)
@@ -703,7 +681,7 @@
 .pr-card h3 { font-size: 0.85em; font-weight: 700; color: var(--mint); margin: 0 0 6px; }
 .pr-val { font-family: 'Space Grotesk', sans-serif; font-size: 1.8em; font-weight: 700; color: #1e293b; }
 .pr-val small { font-size: 0.4em; color: #94a3b8; }
-.pr-card ul { list-style: none; padding: 0; text-align: left; margin-top: 14px; font-size: 13px; color: #475569; }
+.pr-card ul { list-style: none; padding: 0; text-align: left; margin-top: 14px; font-size: 14px; color: #475569; }
 .pr-card ul li { padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.04); }
 .pr-card ul li:last-child { border-bottom: none; }
 
